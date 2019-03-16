@@ -2,6 +2,10 @@
     background-color: #222D32;
 }
 
+.red{
+    color:#A94442;
+}
+
 ul{
     list-style: none;
     margin: 0;
@@ -39,6 +43,10 @@ a:active{
     top: 0;
     background-color: #222D32;
     z-index: 998;
+    transition: all .5s;
+}
+.lt_aside.hidemenu{
+    left: -180px;
 }
 
 .lt_aside .brand{
@@ -98,7 +106,10 @@ a:active{
     padding-left: 180px;
     background-color: pink;
     padding-top: 50px;
-
+    transition: all .5s;
+}
+.lt_main.hidemenu{
+    padding-left: 0;
 }
 
 .lt_topbar{
@@ -109,6 +120,10 @@ a:active{
     left: 0;
     top: 0;
     padding-left: 180px;
+    transition: all .5s;
+}
+.lt_topbar.hidemenu{
+    padding-left: 0;
 }
 .lt_topbar a{
     width: 50px;
