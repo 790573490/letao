@@ -152,6 +152,11 @@ a:active{
     vertical-align: middle;
 }
 
+#paginator li a{
+    cursor: pointer;
+}
+
+
 
 
 
