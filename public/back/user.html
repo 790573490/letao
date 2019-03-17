@@ -90,7 +90,7 @@
     </div>
 </div>
 
-<!--模态框-->
+<!--退出登录模态框-->
 <!--最外层蒙层-->
 <div class="modal fade" tabindex="-1" id="logoutModal">
 
@@ -114,6 +114,30 @@
 </div>
 
 
+
+<!--启用禁用模态框-->
+<div class="modal fade" tabindex="-1" id="userModal">
+    <!--模态框结构-->
+    <!-- modal-sm 小型模态框   modal-lg 大型模态框 -->
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="red"><i class="glyphicon glyphicon-info-sign"></i> 您确定要执行此操作吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="submitBtn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!--
 模板引擎
     1.引包
@@ -132,7 +156,7 @@
         <td>
             {{ v.isDelete === 1 ? "正常" : "禁用"}}
         </td>
-        <td>
+        <td data-id="{{ v.id }}">
             {{ if v.isDelete === 1}}
             <button class="btn btn-danger">禁用</button></td>
             {{ /if }}
