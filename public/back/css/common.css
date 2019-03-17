@@ -1,6 +1,10 @@
 .body_bg{
     background-color: #222D32;
 }
+body,
+html{
+    height: 100%;
+}
 
 .red{
     color:#A94442;
@@ -102,9 +106,8 @@ a:active{
 
 
 .lt_main{
-    height: 1000px;
+    height: 100%;
     padding-left: 180px;
-    background-color: pink;
     padding-top: 50px;
     transition: all .5s;
 }
@@ -134,6 +137,14 @@ a:active{
     font-size: 20px;
 }
 
+.echarts_1{
+    width: 48%;
+    height: 500px;
+}
+.echarts_2{
+    width: 48%;
+    height: 500px;
+}
 
 
 
