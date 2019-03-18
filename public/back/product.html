@@ -142,6 +142,8 @@
                         </div>
                         <!--inout 隐藏域 存储 brandId 存储品牌-->
                         <input type="hidden" name="brandId">
+                        <!-- 产品上下架，默认上架，值为1-->
+                        <input type="hidden" name="statu" value="1">
                     </div>
                     <!--商品名称-->
                     <div class="form-group">
@@ -173,12 +175,10 @@
                         <label class="btn btn-default" for="fileupload">上传图片</label>
                         <!-- name 将来后台用于接收文件 -->
                         <!-- 指定data-url-->
-                        <input type="file" id="fileupload" data-url="/category/addSecondCategoryPic" name="pic1" style="display: none">
+                        <input type="file" id="fileupload" multiple data-url="/product/addProductPic" name="pic1" style="display: none">
                     </div>
                     <div class="form-group" id="imgBox">
-                        <img src="images/none.png" height="100" alt="">
-                        <img src="images/none.png" height="100" alt="">
-                        <img src="images/none.png" height="100" alt="">
+                        <input type="hidden" name="picStatus">
                     </div>
 
 
