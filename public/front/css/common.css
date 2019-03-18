@@ -8,13 +8,16 @@ html{
     padding: 0;
     list-style: none;
 }
-
+img{
+    display: block;
+    width: 100%;
+}
 
 
 .lt_container{
     width: 100%;
     height: 100%;
-    background-color: pink;
+    background-color: #fff;
     max-width: 640px;
     min-width: 320px;
     margin:0 auto;
@@ -87,10 +90,10 @@ html{
     padding-top: 8px;
 }
 .lt_footer li a.current{
-    color:#46d014;
+    color:#03fed7;
 }
 .lt_footer li a.current p{
-    color:#46d014;
+    color:#03fed7;
 }
 .lt_footer li a p{
     color:#FFFFFF;
@@ -115,5 +118,5 @@ html{
 .lt_main{
     width: 100%;
     height: 100%;
-    background-color: orange;
+    position: relative;
 }
