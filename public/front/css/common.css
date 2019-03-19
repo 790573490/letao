@@ -164,3 +164,14 @@ img{
 .lt_product_item .mui-ellipsis-2{
     height: 40px;
 }
+
+/*toast信息提示*/
+.mui-toast-container {
+    bottom: 50% !important;
+}
+.mui-toast-message {
+    /*background: url(/app/themes/default/images/toast.png) no-repeat center 10px #000;*/
+    opacity: 0.6;
+    color: #fff;
+    width: 180px;
+}

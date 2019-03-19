@@ -86,7 +86,7 @@ $(function () {
             }
         })
 
-    })
+    });
 
 
 
@@ -102,7 +102,10 @@ $(function () {
     $(".search_btn").click(function () {
         var key = $(".search_input").val().trim();
         if( key === ""){
-            alert("请输入搜索内容");
+            mui.toast("请输入搜索关键字",{
+                duration:5000,
+                type:"div",
+            });
             return;
         }
         //获取数组

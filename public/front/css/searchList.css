@@ -17,3 +17,12 @@
 .lt_sort a i{
     margin:0 3px;
 }
+
+.loading{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #069;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
