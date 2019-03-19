@@ -27,20 +27,7 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <ul>
-                        <li><a href="#" class="current">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
-                        <li><a href="#">运动馆</a></li>
+                        <!--<li><a href="#" class="current">运动馆</a></li>-->
                     </ul>
 
                 </div>
@@ -50,54 +37,12 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <ul>
-                        <li>
+                        <!--<li>
                             <a href="#">
                                 <img src="./images/brand1.png" alt="">
                                 <p>耐克</p>
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -128,7 +73,28 @@
     </div>
 </div>
 
+<!--左侧模板-->
+<script type="text/html" id="leftTpl">
+    {{ each rows v i }}
+    <li><a href="#" class="{{ i === 0 ? 'current': ''}}" data-id="{{ v.id }}">{{ v.categoryName }}</a></li>
+    {{ /each }}
+</script>
 
+<!--右侧模板-->
+<script type="text/html" id="rightTpl">
+    {{ if rows.length === 0}}
+    <p>没有更多分类信息了</p>
+    {{ else }}
+        {{ each rows v i }}
+        <li>
+            <a href="#">
+                <img src="{{ v. brandLogo }}" alt="">
+                <p>{{ v.brandName }}</p>
+            </a>
+        </li>
+        {{ /each }}
+    {{ /if }}
+</script>
 
 
 
@@ -136,6 +102,8 @@
 
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
 </body>
 </html>
