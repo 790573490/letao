@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--处理IE兼容性的，如果是IE浏览器，使用最近IE引擎来解析页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    // arr.splice( start，num，arg1，arg2,.......)
+    // arr.splice( 从哪儿开始，删除几个，添加的项1，添加的项2)
+
+
+    var arr = ["张飞","赵云","马超","冠宇","刘备"];
+    //1.添加
+    //      需求：在张飞和赵云中间添加 大桥 小乔
+    // arr.splice( 1,0,"大乔","小乔");
+    // console.log(arr);
+
+    //2、删除
+    //      将刘备删除
+    // arr.splice(arr.length-1,1);
+    // console.log(arr);
+
+
+    //3、替换
+    //      将赵云换成码云
+    arr.splice(1,1,"马云");
+    console.log(arr);
+
+
+</script>
+
+
+</body>
+</html>
