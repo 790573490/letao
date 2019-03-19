@@ -17,3 +17,25 @@ var gallery = mui('.mui-slider');
 gallery.slider({
     interval:10000,//自动轮播周期，若为0则不自动播放，默认为0；
 });
+
+
+//该方法专门用于解析地址栏参数
+function getSearch( k ){
+    //获取地址栏参数
+    var sezrch =location.search //name=oo&age=18&desc=%E5%B8%85"
+    //将其解码为中文
+    sezrch = decodeURI(sezrch);
+    //去掉问号
+    sezrch = sezrch.slice(1);
+    //按照 & 截取字符串
+    var arr = sezrch.split("&");
+    // 将arr转换为对象
+    var obj={};
+    arr.forEach(function (v ,i) {
+        var key = v.split("=")[0];
+        var value = v.split("=")[1];
+        //中括号语法可以解析变量
+        obj[key] = value;
+    });
+    return obj[ k ];
+}

@@ -129,6 +129,7 @@ $(function () {
         localStorage.setItem("search_list",JSON.stringify(arr));
         render();
         $(".search_input").val('');
+        location.href = "searchList.html?key="+ key;
     })
 
 

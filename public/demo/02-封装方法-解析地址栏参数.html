@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--处理IE兼容性的，如果是IE浏览器，使用最近IE引擎来解析页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    function getSearch( k ){
+        //获取地址栏参数
+        var sezrch =location.search //name=oo&age=18&desc=%E5%B8%85"
+        //将其解码为中文
+        sezrch = decodeURI(sezrch);
+        //去掉问号
+        sezrch = sezrch.slice(1);
+        //按照 & 截取字符串
+        var arr = sezrch.split("&");
+        // 将arr转换为对象
+        var obj={};
+        arr.forEach(function (v ,i) {
+            var key = v.split("=")[0];
+            var value = v.split("=")[1];
+            //中括号语法可以解析变量
+            obj[key] = value;
+        });
+        return obj[ k ];
+    }
+
+
+    console.log(obj);
+</script>
+
+</body>
+</html>
